@@ -15,7 +15,12 @@
     id resultObj = [Connect_Url getDataWithURL:myurl];
     return resultObj;
 }
-
++(NSObject*)getNewsWithCount:(int)count{
+    NSString* myurl = [NSString stringWithFormat:@"http://beeconnex.azurewebsites.net/news.php?OP=show_all&count=%d",count];
+    //NSObject *resultObj = [self getDataWithURL:myurl];
+    id resultObj = [Connect_Url getDataWithURL:myurl];
+    return resultObj;
+}
 +(NSObject*)createNewsWithTitle:(NSString*)Title
                            Body:(NSString*)Body
                        lalitude:(float)latitude

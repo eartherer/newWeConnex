@@ -15,4 +15,5 @@
                        lalitude:(float)latitude
                       longitude:(float)longitude
                           token:(NSString*)token;
++(NSObject*)getNewsWithCount:(int)count;
 @end
